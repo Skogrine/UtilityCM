@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0889ba59-8f24-4908-b4b2-354b431e3d8a" name="Changes" comment="Add revolutionary utility classes:&#10;&#10;- **TimeSeries**: A class for managing time-series data with statistical methods and time range queries.&#10;- **ConcurrentResourcePool**: A thread-safe resource pool with efficient resource management and disposal.&#10;- **SystemCalculator**: A class for system metrics including CPU usage, memory usage, and disk space.&#10;- **RedisUtility**: Enhanced Redis utility class with support for JedisCluster and improved configuration.&#10;- **AdvancedFunctionUtility**: A utility class for advanced function handling and performance metrics.&#10;&#10;Includes comprehensive unit tests for new classes.">
+    <list default="true" id="0889ba59-8f24-4908-b4b2-354b431e3d8a" name="Changes" comment="Add publishing configuration to build.gradle and update credentials handling&#10;&#10;- Configured the publishing task in build.gradle for publishing artifacts to Sonatype.&#10;- Integrated properties from gradle.properties for secure handling of sensitive credentials.&#10;- Note: .asc file and gradle.properties are excluded from the push to avoid exposing sensitive information.">
       <change afterPath="$PROJECT_DIR$/gpgkey.asc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/DynamicTypeBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/EnhancedJsonObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/ShellCommandExecutor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/TypeSafeMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/fr/skogrine/utilitycm/DynamicTypeBuilderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/fr/skogrine/utilitycm/EnhancedJsonObjectTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/fr/skogrine/utilitycm/ShellCommandExecutorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/CacheManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/CacheManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/TaskQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/TaskQueue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,10 +114,17 @@
     "Attach to process.localhost:5005.executor": "ProcessAttachDebug",
     "Gradle.ConcurrentResourcePoolTest.executor": "Run",
     "Gradle.DependencyInjectorTest.executor": "Run",
+    "Gradle.DynamicTypeBuilderTest.executor": "Run",
+    "Gradle.DynamicTypeBuilderTest.testDynamicClassCreation.executor": "Run",
+    "Gradle.DynamicTypeBuilderTest.testFieldGetterSetter.executor": "Run",
+    "Gradle.EnhancedJsonObjectTest.executor": "Run",
     "Gradle.NetworkManagerTest.executor": "Run",
     "Gradle.ReactiveMapTest.executor": "Run",
     "Gradle.ReactiveMapTest.testGet.executor": "Run",
     "Gradle.ReactiveMapTest.testPutAndRemoveAsync.executor": "Run",
+    "Gradle.ShellCommandExecutorTest.executor": "Run",
+    "Gradle.ShellCommandExecutorTest.testExecuteAsyncInvalidCommand.executor": "Run",
+    "Gradle.ShellCommandExecutorTest.testExecuteSyncInvalidCommand.executor": "Run",
     "Gradle.StateMachineTest.executor": "Run",
     "Gradle.SystemCalculatorTest.executor": "Debug",
     "Gradle.TaskQueueTest.executor": "Run",
@@ -141,124 +151,134 @@
       <recent name="E:\SAVE F\Dev\Skogrine\UtilityCM" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.UtilityCM [jreleaserConfig]">
-    <configuration name="UtilityCM [jreleaserConfig]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.TypeSafeMapTest.testPutInvalidType">
+    <configuration name="DynamicTypeBuilderTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="jreleaserConfig" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;fr.skogrine.utilitycm.DynamicTypeBuilderTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="UtilityCM [publishMavenJavaPublicationToMavenLocal]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="DynamicTypeBuilderTest.testDynamicClassCreation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="publishMavenJavaPublicationToMavenLocal" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;fr.skogrine.utilitycm.DynamicTypeBuilderTest.testDynamicClassCreation&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="UtilityCM [publishToMavenLocal]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="DynamicTypeBuilderTest.testFieldGetterSetter" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="publishToMavenLocal" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;fr.skogrine.utilitycm.DynamicTypeBuilderTest.testFieldGetterSetter&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="UtilityCM [publish]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TypeSafeMapTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="publish" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;fr.skogrine.utilitycm.TypeSafeMapTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="UtilityCM [signMavenJavaPublication]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TypeSafeMapTest.testPutInvalidType" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="signMavenJavaPublication" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;fr.skogrine.utilitycm.TypeSafeMapTest.testPutInvalidType&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.UtilityCM [jreleaserConfig]" />
-        <item itemvalue="Gradle.UtilityCM [publish]" />
-        <item itemvalue="Gradle.UtilityCM [publishToMavenLocal]" />
-        <item itemvalue="Gradle.UtilityCM [publishMavenJavaPublicationToMavenLocal]" />
-        <item itemvalue="Gradle.UtilityCM [signMavenJavaPublication]" />
+        <item itemvalue="Gradle.TypeSafeMapTest.testPutInvalidType" />
+        <item itemvalue="Gradle.TypeSafeMapTest" />
+        <item itemvalue="Gradle.DynamicTypeBuilderTest.testFieldGetterSetter" />
+        <item itemvalue="Gradle.DynamicTypeBuilderTest.testDynamicClassCreation" />
+        <item itemvalue="Gradle.DynamicTypeBuilderTest" />
       </list>
     </recent_temporary>
   </component>
@@ -295,13 +315,22 @@
       <option name="project" value="LOCAL" />
       <updated>1721359951891</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add publishing configuration to build.gradle and update credentials handling&#10;&#10;- Configured the publishing task in build.gradle for publishing artifacts to Sonatype.&#10;- Integrated properties from gradle.properties for secure handling of sensitive credentials.&#10;- Note: .asc file and gradle.properties are excluded from the push to avoid exposing sensitive information.">
+      <option name="closed" value="true" />
+      <created>1721363806943</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1721363806943</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add @NotFinished annotation and related test&#10;&#10;- Introduced @NotFinished annotation to mark unstable or incomplete code.&#10;- Added WarningUtil class to print console warnings when using annotated classes or methods.&#10;- Created unit tests to validate the functionality of the @NotFinished annotation and warning mechanism." />
     <MESSAGE value="Add revolutionary utility classes:&#10;&#10;- **TimeSeries**: A class for managing time-series data with statistical methods and time range queries.&#10;- **ConcurrentResourcePool**: A thread-safe resource pool with efficient resource management and disposal.&#10;- **SystemCalculator**: A class for system metrics including CPU usage, memory usage, and disk space.&#10;- **RedisUtility**: Enhanced Redis utility class with support for JedisCluster and improved configuration.&#10;- **AdvancedFunctionUtility**: A utility class for advanced function handling and performance metrics.&#10;&#10;Includes comprehensive unit tests for new classes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add revolutionary utility classes:&#10;&#10;- **TimeSeries**: A class for managing time-series data with statistical methods and time range queries.&#10;- **ConcurrentResourcePool**: A thread-safe resource pool with efficient resource management and disposal.&#10;- **SystemCalculator**: A class for system metrics including CPU usage, memory usage, and disk space.&#10;- **RedisUtility**: Enhanced Redis utility class with support for JedisCluster and improved configuration.&#10;- **AdvancedFunctionUtility**: A utility class for advanced function handling and performance metrics.&#10;&#10;Includes comprehensive unit tests for new classes." />
+    <MESSAGE value="Add publishing configuration to build.gradle and update credentials handling&#10;&#10;- Configured the publishing task in build.gradle for publishing artifacts to Sonatype.&#10;- Integrated properties from gradle.properties for secure handling of sensitive credentials.&#10;- Note: .asc file and gradle.properties are excluded from the push to avoid exposing sensitive information." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add publishing configuration to build.gradle and update credentials handling&#10;&#10;- Configured the publishing task in build.gradle for publishing artifacts to Sonatype.&#10;- Integrated properties from gradle.properties for secure handling of sensitive credentials.&#10;- Note: .asc file and gradle.properties are excluded from the push to avoid exposing sensitive information." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
