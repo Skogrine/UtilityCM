@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0889ba59-8f24-4908-b4b2-354b431e3d8a" name="Changes" comment="Add @NotFinished annotation and related test&#10;&#10;- Introduced @NotFinished annotation to mark unstable or incomplete code.&#10;- Added WarningUtil class to print console warnings when using annotated classes or methods.&#10;- Created unit tests to validate the functionality of the @NotFinished annotation and warning mechanism.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/ConcurrentResourcePool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/DynamicQueryOptimizer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/DynamicResourceAllocator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/ReactiveDataFlowProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/ReactiveMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/fr/skogrine/utilitycm/ConcurrentResourcePoolTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/fr/skogrine/utilitycm/DependencyInjectorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/fr/skogrine/utilitycm/ReactiveMapTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/fr/skogrine/utilitycm/SystemCalculatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-    </list>
+    <list default="true" id="0889ba59-8f24-4908-b4b2-354b431e3d8a" name="Changes" comment="Add revolutionary utility classes:&#10;&#10;- **TimeSeries**: A class for managing time-series data with statistical methods and time range queries.&#10;- **ConcurrentResourcePool**: A thread-safe resource pool with efficient resource management and disposal.&#10;- **SystemCalculator**: A class for system metrics including CPU usage, memory usage, and disk space.&#10;- **RedisUtility**: Enhanced Redis utility class with support for JedisCluster and improved configuration.&#10;- **AdvancedFunctionUtility**: A utility class for advanced function handling and performance metrics.&#10;&#10;Includes comprehensive unit tests for new classes." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -261,12 +249,21 @@
       <option name="project" value="LOCAL" />
       <updated>1721352206242</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add revolutionary utility classes:&#10;&#10;- **TimeSeries**: A class for managing time-series data with statistical methods and time range queries.&#10;- **ConcurrentResourcePool**: A thread-safe resource pool with efficient resource management and disposal.&#10;- **SystemCalculator**: A class for system metrics including CPU usage, memory usage, and disk space.&#10;- **RedisUtility**: Enhanced Redis utility class with support for JedisCluster and improved configuration.&#10;- **AdvancedFunctionUtility**: A utility class for advanced function handling and performance metrics.&#10;&#10;Includes comprehensive unit tests for new classes.">
+      <option name="closed" value="true" />
+      <created>1721359889256</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1721359889256</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add @NotFinished annotation and related test&#10;&#10;- Introduced @NotFinished annotation to mark unstable or incomplete code.&#10;- Added WarningUtil class to print console warnings when using annotated classes or methods.&#10;- Created unit tests to validate the functionality of the @NotFinished annotation and warning mechanism." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add @NotFinished annotation and related test&#10;&#10;- Introduced @NotFinished annotation to mark unstable or incomplete code.&#10;- Added WarningUtil class to print console warnings when using annotated classes or methods.&#10;- Created unit tests to validate the functionality of the @NotFinished annotation and warning mechanism." />
+    <MESSAGE value="Add revolutionary utility classes:&#10;&#10;- **TimeSeries**: A class for managing time-series data with statistical methods and time range queries.&#10;- **ConcurrentResourcePool**: A thread-safe resource pool with efficient resource management and disposal.&#10;- **SystemCalculator**: A class for system metrics including CPU usage, memory usage, and disk space.&#10;- **RedisUtility**: Enhanced Redis utility class with support for JedisCluster and improved configuration.&#10;- **AdvancedFunctionUtility**: A utility class for advanced function handling and performance metrics.&#10;&#10;Includes comprehensive unit tests for new classes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add revolutionary utility classes:&#10;&#10;- **TimeSeries**: A class for managing time-series data with statistical methods and time range queries.&#10;- **ConcurrentResourcePool**: A thread-safe resource pool with efficient resource management and disposal.&#10;- **SystemCalculator**: A class for system metrics including CPU usage, memory usage, and disk space.&#10;- **RedisUtility**: Enhanced Redis utility class with support for JedisCluster and improved configuration.&#10;- **AdvancedFunctionUtility**: A utility class for advanced function handling and performance metrics.&#10;&#10;Includes comprehensive unit tests for new classes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
