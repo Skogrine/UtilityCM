@@ -1,101 +1,145 @@
 package fr.skogrine.utilitycm;
 
+import fr.skogrine.utilitycm.annotation.NotFinished;
+
 import java.util.PriorityQueue;
-import java.util.Queue;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
-import java.util.function.Consumer;
 
 /**
- * TaskQueue manages a queue of tasks to be executed asynchronously, supporting prioritization, delay, and retries.
+ * A class that manages and schedules tasks based on priority and delay.
+ * Tasks with higher priority are executed before tasks with lower priority.
+ * Tasks can be scheduled with a delay and a periodic interval.
  *
- * <p>Example usage:</p>
- * <pre>{@code
- * TaskQueue taskQueue = new TaskQueue();
- * taskQueue.addTask(1, () -> System.out.println("High priority task executed"));
- * taskQueue.addTask(5, () -> System.out.println("Low priority task executed"), 3, 1, TimeUnit.SECONDS);
- * }</pre>
+ * @hidden
+ * @implNote Don't use it right now
  */
+@NotFinished
 public class TaskQueue {
-
-    private final ScheduledExecutorService executorService;
-    private final Queue<ScheduledTask> taskQueue;
-
-    /**
-     * Constructs a TaskQueue with a fixed thread pool for executing tasks.
-     */
-    public TaskQueue() {
-        this.executorService = Executors.newScheduledThreadPool(1);
-        this.taskQueue = new PriorityQueue<>();
-        startProcessing();
-    }
+    private final ScheduledExecutorService executorService = Executors.newScheduledThreadPool(1);
+    private final PriorityQueue<ScheduledTask> taskQueue = new PriorityQueue<>();
 
     /**
      * Adds a task to the queue with the specified priority.
+     * The task will be executed immediately without any delay.
      *
-     * @param priority the priority of the task (lower value means higher priority)
-     * @param task the task to be executed
+     * @param priority the priority of the task; higher values indicate higher priority
+     * @param task     the task to be executed
      */
-    public void addTask(int priority, Runnable task) {
-        addTask(priority, task, 0, 0, TimeUnit.MILLISECONDS);
+    public synchronized void addTask(int priority, Runnable task) {
+        addTask(priority, task, 0, 1, TimeUnit.MILLISECONDS);
     }
 
     /**
-     * Adds a task to the queue with the specified priority, delay, and retry configuration.
+     * Adds a task to the queue with the specified priority, delay, and periodic interval.
+     * The task will be executed after the specified delay and then periodically
+     * based on the specified period.
      *
-     * @param priority the priority of the task (lower value means higher priority)
-     * @param task the task to be executed
-     * @param retryCount the number of times to retry the task if it fails
-     * @param timeUnit the time unit for delay and retry interval
+     * @param priority the priority of the task; higher values indicate higher priority
+     * @param task     the task to be executed
+     * @param delay    the delay before the task is first executed
+     * @param period   the period between successive executions of the task
+     * @param timeUnit the time unit for delay and period
      */
-    public void addTask(int priority, Runnable task, int retryCount, long retryInterval, TimeUnit timeUnit) {
-        taskQueue.offer(new ScheduledTask(priority, task, retryCount, retryInterval, timeUnit));
-    }
+    public synchronized void addTask(int priority, Runnable task, long delay, long period, TimeUnit timeUnit) {
+        if (delay < 0 || period < 0) {
+            throw new IllegalArgumentException("Delay and period must be non-negative");
+        }
+        if (period == 0) {
+            throw new IllegalArgumentException("Period must be positive if specified");
+        }
 
-    private void startProcessing() {
-        executorService.scheduleAtFixedRate(() -> {
-            ScheduledTask task = taskQueue.poll();
-            if (task != null) {
-                try {
-                    task.run();
-                } catch (Exception e) {
-                    // Handle task failure (e.g., log error, retry)
-                    if (task.retryCount > 0) {
-                        task.retryCount--;
-                        taskQueue.offer(task);
-                    }
-                }
-            }
-        }, 0, 1, TimeUnit.SECONDS);
+        ScheduledTask scheduledTask = new ScheduledTask(priority, task, delay, period, timeUnit);
+        taskQueue.add(scheduledTask);
+        scheduleNextTask();
     }
 
     /**
-     * A wrapper class for tasks with priority, retry, and delay configuration.
+     * Schedules the next task in the queue to be executed.
+     * The task with the highest priority is selected and scheduled.
      */
-    private static class ScheduledTask implements Comparable<ScheduledTask>, Runnable {
+    private synchronized void scheduleNextTask() {
+        ScheduledTask task = taskQueue.poll();
+        if (task != null) {
+            executorService.scheduleAtFixedRate(task, task.getDelay(), task.getPeriod(), task.getTimeUnit());
+        }
+    }
+
+    /**
+     * A private inner class representing a task with a specified priority,
+     * delay, and periodic interval.
+     */
+    private static class ScheduledTask extends java.util.TimerTask implements Comparable<ScheduledTask> {
         private final int priority;
         private final Runnable task;
-        private int retryCount;
-        private final long retryInterval;
+        private final long delay;
+        private final long period;
         private final TimeUnit timeUnit;
 
-        ScheduledTask(int priority, Runnable task, int retryCount, long retryInterval, TimeUnit timeUnit) {
+        /**
+         * Constructs a ScheduledTask with the specified priority, task, delay, period, and time unit.
+         *
+         * @param priority the priority of the task; higher values indicate higher priority
+         * @param task     the task to be executed
+         * @param delay    the delay before the task is first executed
+         * @param period   the period between successive executions of the task
+         * @param timeUnit the time unit for delay and period
+         */
+        public ScheduledTask(int priority, Runnable task, long delay, long period, TimeUnit timeUnit) {
             this.priority = priority;
             this.task = task;
-            this.retryCount = retryCount;
-            this.retryInterval = retryInterval;
+            this.delay = delay;
+            this.period = period;
             this.timeUnit = timeUnit;
         }
 
-        @Override
-        public int compareTo(ScheduledTask o) {
-            return Integer.compare(this.priority, o.priority);
+        /**
+         * Gets the delay before the task is first executed, in milliseconds.
+         *
+         * @return the delay in milliseconds
+         */
+        public long getDelay() {
+            return timeUnit.toMillis(delay);
         }
 
+        /**
+         * Gets the period between successive executions of the task, in milliseconds.
+         *
+         * @return the period in milliseconds
+         */
+        public long getPeriod() {
+            return timeUnit.toMillis(period);
+        }
+
+        /**
+         * Gets the time unit used for delay and period.
+         *
+         * @return the time unit
+         */
+        public TimeUnit getTimeUnit() {
+            return timeUnit;
+        }
+
+        /**
+         * Executes the task.
+         */
         @Override
         public void run() {
             task.run();
         }
+
+        /**
+         * Compares this task with another based on priority.
+         *
+         * @param other the other task to compare with
+         * @return a negative integer, zero, or a positive integer as this task's priority
+         *         is greater than, equal to, or less than the other task's priority
+         */
+        @Override
+        public int compareTo(ScheduledTask other) {
+            return Integer.compare(other.priority, this.priority);
+        }
     }
 }
+
