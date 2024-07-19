@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0889ba59-8f24-4908-b4b2-354b431e3d8a" name="Changes" comment="Add revolutionary utility classes:&#10;&#10;- **TimeSeries**: A class for managing time-series data with statistical methods and time range queries.&#10;- **ConcurrentResourcePool**: A thread-safe resource pool with efficient resource management and disposal.&#10;- **SystemCalculator**: A class for system metrics including CPU usage, memory usage, and disk space.&#10;- **RedisUtility**: Enhanced Redis utility class with support for JedisCluster and improved configuration.&#10;- **AdvancedFunctionUtility**: A utility class for advanced function handling and performance metrics.&#10;&#10;Includes comprehensive unit tests for new classes." />
+    <list default="true" id="0889ba59-8f24-4908-b4b2-354b431e3d8a" name="Changes" comment="Add revolutionary utility classes:&#10;&#10;- **TimeSeries**: A class for managing time-series data with statistical methods and time range queries.&#10;- **ConcurrentResourcePool**: A thread-safe resource pool with efficient resource management and disposal.&#10;- **SystemCalculator**: A class for system metrics including CPU usage, memory usage, and disk space.&#10;- **RedisUtility**: Enhanced Redis utility class with support for JedisCluster and improved configuration.&#10;- **AdvancedFunctionUtility**: A utility class for advanced function handling and performance metrics.&#10;&#10;Includes comprehensive unit tests for new classes.">
+      <change afterPath="$PROJECT_DIR$/gpgkey.asc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/CacheManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/CacheManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/TaskQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/TaskQueue.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +40,24 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="UtilityCM" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="UtilityCM" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="jreleaser" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="UtilityCM" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="UtilityCM" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="publishing" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -93,142 +119,146 @@
     "Gradle.SystemCalculatorTest.executor": "Debug",
     "Gradle.TaskQueueTest.executor": "Run",
     "Gradle.TaskQueueTest.testTaskQueue.executor": "Debug",
+    "Gradle.UtilityCM [jreleaserConfig].executor": "Run",
+    "Gradle.UtilityCM [publishMavenJavaPublicationToMavenLocal].executor": "Run",
+    "Gradle.UtilityCM [publishToMavenLocal].executor": "Run",
+    "Gradle.UtilityCM [publish].executor": "Run",
+    "Gradle.UtilityCM [showMeCache].executor": "Run",
+    "Gradle.UtilityCM [signMavenJavaPublication].executor": "Run",
     "Gradle.UtilityCM [test] (1).executor": "Run",
     "Gradle.UtilityCM [test].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "deletionFromPopupRequiresConfirmation": "false",
     "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true"
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/SAVE F/Dev/Skogrine/UtilityCM"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.SystemCalculatorTest">
-    <configuration name="ConcurrentResourcePoolTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\SAVE F\Dev\Skogrine\UtilityCM" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.UtilityCM [jreleaserConfig]">
+    <configuration name="UtilityCM [jreleaserConfig]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;fr.skogrine.utilitycm.ConcurrentResourcePoolTest&quot;" />
+            <option value="jreleaserConfig" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="ReactiveMapTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UtilityCM [publishMavenJavaPublicationToMavenLocal]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;fr.skogrine.utilitycm.ReactiveMapTest&quot;" />
+            <option value="publishMavenJavaPublicationToMavenLocal" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="ReactiveMapTest.testGet" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UtilityCM [publishToMavenLocal]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;fr.skogrine.utilitycm.ReactiveMapTest.testGet&quot;" />
+            <option value="publishToMavenLocal" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="ReactiveMapTest.testPutAndRemoveAsync" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UtilityCM [publish]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;fr.skogrine.utilitycm.ReactiveMapTest.testPutAndRemoveAsync&quot;" />
+            <option value="publish" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="SystemCalculatorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UtilityCM [signMavenJavaPublication]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;fr.skogrine.utilitycm.SystemCalculatorTest&quot;" />
+            <option value="signMavenJavaPublication" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.SystemCalculatorTest" />
-        <item itemvalue="Gradle.ConcurrentResourcePoolTest" />
-        <item itemvalue="Gradle.ReactiveMapTest.testPutAndRemoveAsync" />
-        <item itemvalue="Gradle.ReactiveMapTest.testGet" />
-        <item itemvalue="Gradle.ReactiveMapTest" />
+        <item itemvalue="Gradle.UtilityCM [jreleaserConfig]" />
+        <item itemvalue="Gradle.UtilityCM [publish]" />
+        <item itemvalue="Gradle.UtilityCM [publishToMavenLocal]" />
+        <item itemvalue="Gradle.UtilityCM [publishMavenJavaPublicationToMavenLocal]" />
+        <item itemvalue="Gradle.UtilityCM [signMavenJavaPublication]" />
       </list>
     </recent_temporary>
   </component>
@@ -257,7 +287,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721359889256</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add revolutionary utility classes:&#10;&#10;- **TimeSeries**: A class for managing time-series data with statistical methods and time range queries.&#10;- **ConcurrentResourcePool**: A thread-safe resource pool with efficient resource management and disposal.&#10;- **SystemCalculator**: A class for system metrics including CPU usage, memory usage, and disk space.&#10;- **RedisUtility**: Enhanced Redis utility class with support for JedisCluster and improved configuration.&#10;- **AdvancedFunctionUtility**: A utility class for advanced function handling and performance metrics.&#10;&#10;Includes comprehensive unit tests for new classes.">
+      <option name="closed" value="true" />
+      <created>1721359951891</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1721359951891</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

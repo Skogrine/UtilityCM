@@ -11,9 +11,6 @@ import java.util.concurrent.TimeUnit;
  * A class that manages and schedules tasks based on priority and delay.
  * Tasks with higher priority are executed before tasks with lower priority.
  * Tasks can be scheduled with a delay and a periodic interval.
- *
- * @hidden
- * @implNote Don't use it right now
  */
 @NotFinished
 public class TaskQueue {

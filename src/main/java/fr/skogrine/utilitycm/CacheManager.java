@@ -16,6 +16,8 @@ import java.util.Map;
  * cache.put("d", "4");
  * System.out.println(cache.get("b")); // Output: null (evicted due to LRU policy)
  * }</pre>
+ * @param <K> key
+ * @param <V> value
  */
 public class CacheManager<K, V> extends LinkedHashMap<K, V> {
     private final int capacity;
