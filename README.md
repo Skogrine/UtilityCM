@@ -6,15 +6,19 @@ Welcome to the **UtilityCM** repository! This collection of utility classes is d
 
 This repository contains several revolutionary classes that address common challenges in modern Java development:
 
-1. **`RateLimiter`**: Manage and control the rate of operations to prevent overloading resources or services.
-2. **`GraphQLBuilder`**: Build and execute GraphQL queries and mutations with ease.
-3. **`StateMachine`**: Implement state machines with support for complex transitions and event handling.
-4. **`NetworkManager`**: Handle network requests with caching, retries, and monitoring.
-5. **`TaskQueue`**: Manage and prioritize asynchronous tasks with support for retries and delays.
-6. **`MetricsCollector`**: Collect and analyze performance metrics for better monitoring and optimization.
-7. **`ConcurrentMap`**: Extend `ConcurrentHashMap` with additional atomic operations and utilities.
-8. **`CryptoUtil`**: Provide encryption, decryption, and hashing functionalities using modern algorithms.
-9. **`ConfigManager`**: Manage and reload configuration settings dynamically and hierarchically.
+1. **`TimeSeries`**: Manage and analyze time-series data with support for statistical methods and querying by time range.
+2. **`RateLimiter`**: Manage and control the rate of operations to prevent overloading resources or services.
+3. **`GraphQLBuilder`**: Build and execute GraphQL queries and mutations with ease.
+4. **`StateMachine`**: Implement state machines with support for complex transitions and event handling.
+5. **`NetworkManager`**: Handle network requests with caching, retries, and monitoring.
+6. **`TaskQueue`**: Manage and prioritize asynchronous tasks with support for retries and delays.
+7. **`MetricsCollector`**: Collect and analyze performance metrics for better monitoring and optimization.
+8. **`ConcurrentMap`**: Extend `ConcurrentHashMap` with additional atomic operations and utilities.
+9. **`CryptoUtil`**: Provide encryption, decryption, and hashing functionalities using modern algorithms.
+10. **`ConfigManager`**: Manage and reload configuration settings dynamically and hierarchically.
+11. **`SystemCalculator`**: Calculate and monitor system metrics such as CPU usage, memory usage, and disk space.
+12. **`RedisUtility`**: Enhanced Redis utility class with support for JedisCluster and improved configuration.
+13. **`AdvancedFunctionUtility`**: Handle advanced function operations and performance metrics.
 
 ## Features
 

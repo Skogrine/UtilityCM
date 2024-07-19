@@ -4,19 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0889ba59-8f24-4908-b4b2-354b431e3d8a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/fr/skogrine/utilitycm/ConcurrentMapTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/fr/skogrine/utilitycm/ConfigManagerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/fr/skogrine/utilitycm/CryptoUtilTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/fr/skogrine/utilitycm/GraphQLBuilderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/fr/skogrine/utilitycm/MetricsCollectorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/fr/skogrine/utilitycm/NetworkManagerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/fr/skogrine/utilitycm/RateLimiterTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/fr/skogrine/utilitycm/StateMachineTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/fr/skogrine/utilitycm/TaskQueueTest.java" afterDir="false" />
+    <list default="true" id="0889ba59-8f24-4908-b4b2-354b431e3d8a" name="Changes" comment="Add @NotFinished annotation and related test&#10;&#10;- Introduced @NotFinished annotation to mark unstable or incomplete code.&#10;- Added WarningUtil class to print console warnings when using annotated classes or methods.&#10;- Created unit tests to validate the functionality of the @NotFinished annotation and warning mechanism.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/ConcurrentResourcePool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/DynamicQueryOptimizer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/DynamicResourceAllocator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/ReactiveDataFlowProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/ReactiveMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/fr/skogrine/utilitycm/ConcurrentResourcePoolTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/fr/skogrine/utilitycm/DependencyInjectorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/fr/skogrine/utilitycm/ReactiveMapTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/fr/skogrine/utilitycm/SystemCalculatorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/TaskQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/TaskQueue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +61,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -95,8 +95,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Attach to process.localhost:5005.executor": "ProcessAttachDebug",
+    "Gradle.ConcurrentResourcePoolTest.executor": "Run",
+    "Gradle.DependencyInjectorTest.executor": "Run",
     "Gradle.NetworkManagerTest.executor": "Run",
+    "Gradle.ReactiveMapTest.executor": "Run",
+    "Gradle.ReactiveMapTest.testGet.executor": "Run",
+    "Gradle.ReactiveMapTest.testPutAndRemoveAsync.executor": "Run",
     "Gradle.StateMachineTest.executor": "Run",
+    "Gradle.SystemCalculatorTest.executor": "Debug",
     "Gradle.TaskQueueTest.executor": "Run",
     "Gradle.TaskQueueTest.testTaskQueue.executor": "Debug",
     "Gradle.UtilityCM [test] (1).executor": "Run",
@@ -107,8 +113,8 @@
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.TaskQueueTest">
-    <configuration name="NetworkManagerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.SystemCalculatorTest">
+    <configuration name="ConcurrentResourcePoolTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -121,7 +127,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;fr.skogrine.utilitycm.NetworkManagerTest&quot;" />
+            <option value="&quot;fr.skogrine.utilitycm.ConcurrentResourcePoolTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -132,7 +138,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="StateMachineTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ReactiveMapTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -145,7 +151,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;fr.skogrine.utilitycm.StateMachineTest&quot;" />
+            <option value="&quot;fr.skogrine.utilitycm.ReactiveMapTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -156,7 +162,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="TaskQueueTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ReactiveMapTest.testGet" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -169,7 +175,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;fr.skogrine.utilitycm.TaskQueueTest&quot;" />
+            <option value="&quot;fr.skogrine.utilitycm.ReactiveMapTest.testGet&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -180,29 +186,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="UtilityCM [test] (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="UtilityCM [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ReactiveMapTest.testPutAndRemoveAsync" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -213,25 +197,50 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="test" />
-            <option value="--debug-jvm" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;fr.skogrine.utilitycm.ReactiveMapTest.testPutAndRemoveAsync&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="SystemCalculatorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;fr.skogrine.utilitycm.SystemCalculatorTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.TaskQueueTest" />
-        <item itemvalue="Gradle.UtilityCM [test] (1)" />
-        <item itemvalue="Gradle.UtilityCM [test]" />
-        <item itemvalue="Gradle.StateMachineTest" />
-        <item itemvalue="Gradle.NetworkManagerTest" />
+        <item itemvalue="Gradle.SystemCalculatorTest" />
+        <item itemvalue="Gradle.ConcurrentResourcePoolTest" />
+        <item itemvalue="Gradle.ReactiveMapTest.testPutAndRemoveAsync" />
+        <item itemvalue="Gradle.ReactiveMapTest.testGet" />
+        <item itemvalue="Gradle.ReactiveMapTest" />
       </list>
     </recent_temporary>
   </component>
@@ -244,7 +253,20 @@
       <option name="presentableId" value="Default" />
       <updated>1721347915837</updated>
     </task>
+    <task id="LOCAL-00001" summary="Add @NotFinished annotation and related test&#10;&#10;- Introduced @NotFinished annotation to mark unstable or incomplete code.&#10;- Added WarningUtil class to print console warnings when using annotated classes or methods.&#10;- Created unit tests to validate the functionality of the @NotFinished annotation and warning mechanism.">
+      <option name="closed" value="true" />
+      <created>1721352206242</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1721352206242</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add @NotFinished annotation and related test&#10;&#10;- Introduced @NotFinished annotation to mark unstable or incomplete code.&#10;- Added WarningUtil class to print console warnings when using annotated classes or methods.&#10;- Created unit tests to validate the functionality of the @NotFinished annotation and warning mechanism." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add @NotFinished annotation and related test&#10;&#10;- Introduced @NotFinished annotation to mark unstable or incomplete code.&#10;- Added WarningUtil class to print console warnings when using annotated classes or methods.&#10;- Created unit tests to validate the functionality of the @NotFinished annotation and warning mechanism." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
