@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0889ba59-8f24-4908-b4b2-354b431e3d8a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/CacheManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/ConcurrentMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/ConfigManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/CryptoUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/DependencyInjector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/EventBus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/GraphQLBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/MetricsCollector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/MultiValueMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/NetworkManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/PipelineProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/RateLimiter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/SmartStringBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/StateMachine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/SystemCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/TaskQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/skogrine/utilitycm/TaskScheduler.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Skogrine"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Skogrine/UtilityCM.git",
+    "accountId": "425d0bca-dccc-4ab6-92d7-833e71363b96"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2jRRTZXxbokRkBNnpjDeMnx1GAj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0889ba59-8f24-4908-b4b2-354b431e3d8a" name="Changes" comment="" />
+      <created>1721347915837</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1721347915837</updated>
+    </task>
+    <servers />
+  </component>
+</project>

@@ -1,0 +1,14 @@
+plugins {
+    id 'java'
+}
+
+group = 'fr.skogrine.utilitycm'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    useJUnitPlatform()
+}
