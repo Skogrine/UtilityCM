@@ -4,7 +4,7 @@ Welcome to the **UtilityCM** repository! This collection of utility classes is d
 
 ## Overview
 
-This repository contains several revolutionary classes that address common challenges in modern Java development:
+This repository contains several classes that address common challenges in modern Java development:
 
 1. **`TimeSeries`**: Manage and analyze time-series data with support for statistical methods and querying by time range.
 2. **`RateLimiter`**: Manage and control the rate of operations to prevent overloading resources or services.
