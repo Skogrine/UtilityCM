@@ -2,6 +2,14 @@
 
 Welcome to the **UtilityCM** repository! This collection of utility classes is designed to enhance your Java development experience by providing advanced and highly reusable components. Our goal is to offer developers powerful tools that simplify common tasks and improve code efficiency.
 
+[![Skogrine - UtilityCM](https://img.shields.io/static/v1?label=Skogrine&message=UtilityCM&color=blue&logo=github)](https://github.com/Skogrine/UtilityCM "Go to GitHub repo")
+[![stars - UtilityCM](https://img.shields.io/github/stars/Skogrine/UtilityCM?style=social)](https://github.com/Skogrine/UtilityCM)
+[![forks - UtilityCM](https://img.shields.io/github/forks/Skogrine/UtilityCM?style=social)](https://github.com/Skogrine/UtilityCM)
+
+[![License](https://img.shields.io/badge/License-MIT-blue)](#license)
+[![issues - UtilityCM](https://img.shields.io/github/issues/Skogrine/UtilityCM)](https://github.com/Skogrine/UtilityCM/issues)
+[![contributions - welcome](https://img.shields.io/badge/contributions-welcome-blue)](/CONTRIBUTING.md "Go to contributions doc")
+
 ## Overview
 
 This repository contains several classes that address common challenges in modern Java development:
@@ -80,7 +88,8 @@ machine.transition("START", "END");
 We welcome contributions to improve this repository. If you have suggestions or bug reports, please open an issue or submit a pull request.
 
 ### License
-This project is licensed under the MIT License - see the LICENSE file for details.
+Released under [MIT](/LICENSE) by [@Skogrine](https://github.com/Skogrine).
+
 
 ### Contact
 For any inquiries, please contact me at skogrinepro@gmail.com.
