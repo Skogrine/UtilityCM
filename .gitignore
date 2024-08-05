@@ -6,7 +6,7 @@ build/
 
 
 gradle.properties
-gpgkey.asc
+*.asc
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
