@@ -53,8 +53,8 @@ To get started with the UtilityCM, follow these instructions:
 You can include these utilities in your project by cloning the repository and adding the classes to your project.
 
 ```bash
-git clone https://github.com/yourusername/advanced-java-utilities.git
-cd advanced-java-utilities
+git clone https://github.com/Skogrine/UtilityCM.git
+cd UtilityCM
 ```
 
 ### Usage
